@@ -4,7 +4,7 @@
 ![Express](https://img.shields.io/badge/Express.js-000000?style=for-the-badge&logo=express&logoColor=white)
 ![React](https://img.shields.io/badge/React-61DAFB?style=for-the-badge&logo=react&logoColor=black)
 ![Node.js](https://img.shields.io/badge/Node.js-339933?style=for-the-badge&logo=nodedotjs&logoColor=white)
-![Vite](https://img.shields.io/badge/Vite-646CFF?style=for-the-badge&logo=vite&logoColor=white)
+![](https://img.shields.io/badge/-646CFF?style=for-the-badge&logo=&logoColor=white)
 ![Axios](https://img.shields.io/badge/Axios-5A29E4?style=for-the-badge)
 ![REST API](https://img.shields.io/badge/REST-API-blue?style=for-the-badge)
 
@@ -81,7 +81,7 @@ Desarrollar un sistema web que facilite la gestión administrativa de un salón 
 # 🏗 Arquitectura del Sistema
 
 ```text
-React + Vite
+React + 
       │
       │ Axios
       ▼
@@ -101,7 +101,7 @@ MongoDB (Mongoose)
 ## Frontend
 
 - React
-- Vite
+- 
 - Axios
 - CSS
 
@@ -141,7 +141,7 @@ JudithHairStudio/
 │   ├── public/
 │   ├── src/
 │   ├── package.json
-│   ├── vite.config.js
+│   ├── .config.js
 │   └── index.html
 │
 ├── README.md
@@ -203,7 +203,7 @@ Antes de comenzar, asegúrese de contar con:
 ## 1. Clonar el repositorio
 
 ```bash
-git clone https://github.com/TU_USUARIO/judith-hairstudio-management.git
+git clone https://github.com/aledash3/sistema-gestion-salon-belleza.git
 ```
 
 ---
@@ -291,10 +291,10 @@ cd frontend
 npm run dev
 ```
 
-Vite mostrará una dirección similar a:
+ mostrará una dirección similar a:
 
 ```text
-http://localhost:5173
+http://localhost:3000
 ```
 
 ---
@@ -314,7 +314,7 @@ Esto permite acceder al sistema desde otros dispositivos conectados a la misma r
 - Backend y Frontend estén en ejecución.
 - Ambos dispositivos pertenezcan a la misma red.
 - El puerto **5000** se encuentre disponible para el Backend.
-- El puerto utilizado por **Vite** se encuentre accesible para el Frontend.
+- El puerto utilizado por **** se encuentre accesible para el Frontend.
 
 ---
 
