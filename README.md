@@ -185,7 +185,20 @@ Categoría
 
 ---
 
-# 🚀 Instalación
+# 🚀 Despliegue
+
+A continuación se describen los pasos necesarios para ejecutar el sistema en un nuevo equipo.
+
+## Requisitos Previos
+
+Antes de comenzar, asegúrese de contar con:
+
+- Node.js 20 o superior
+- npm
+- Git
+- Una instancia de MongoDB (local o MongoDB Atlas)
+
+---
 
 ## 1. Clonar el repositorio
 
@@ -195,16 +208,16 @@ git clone https://github.com/TU_USUARIO/judith-hairstudio-management.git
 
 ---
 
-## 2. Instalar dependencias del Backend
+## 2. Instalar dependencias
+
+### Backend
 
 ```bash
 cd backend
 npm install
 ```
 
----
-
-## 3. Instalar dependencias del Frontend
+### Frontend
 
 ```bash
 cd ../frontend
@@ -213,7 +226,7 @@ npm install
 
 ---
 
-## 4. Configurar variables de entorno
+## 3. Configurar las variables de entorno
 
 Crear el archivo:
 
@@ -221,12 +234,38 @@ Crear el archivo:
 backend/.env
 ```
 
-Ejemplo:
+Si utiliza **MongoDB Atlas**, configure una cadena de conexión similar a:
+
+```env
+PORT=5000
+MONGO_URI=mongodb+srv://usuario:contraseña@cluster.mongodb.net/JudithHairStudio
+```
+
+Si utiliza **MongoDB Community** de forma local:
 
 ```env
 PORT=5000
 MONGO_URI=mongodb://localhost:27017/JudithHairStudio
 ```
+
+> **Importante:** El archivo `.env` no se encuentra incluido en este repositorio por razones de seguridad.
+
+---
+
+## 4. Configurar MongoDB Atlas (si aplica)
+
+Si la base de datos se encuentra alojada en MongoDB Atlas:
+
+- Crear un usuario con permisos sobre la base de datos.
+- Configurar la cadena de conexión en el archivo `.env`.
+- Agregar la dirección IP del equipo en **Network Access**.
+- Para pruebas o desarrollo puede utilizar temporalmente:
+
+```text
+0.0.0.0/0
+```
+
+Esto permitirá conexiones desde cualquier dirección IP.
 
 ---
 
@@ -237,6 +276,12 @@ cd backend
 npm run dev
 ```
 
+El servidor iniciará por defecto en:
+
+```text
+http://localhost:5000
+```
+
 ---
 
 ## 6. Ejecutar el Frontend
@@ -245,6 +290,39 @@ npm run dev
 cd frontend
 npm run dev
 ```
+
+Vite mostrará una dirección similar a:
+
+```text
+http://localhost:5173
+```
+
+---
+
+## 7. Acceso desde otros dispositivos
+
+El frontend obtiene automáticamente la dirección IP del equipo donde se ejecuta el servidor mediante:
+
+```javascript
+window.location.hostname
+```
+
+Esto permite acceder al sistema desde otros dispositivos conectados a la misma red local sin modificar el código fuente.
+
+Únicamente es necesario que:
+
+- Backend y Frontend estén en ejecución.
+- Ambos dispositivos pertenezcan a la misma red.
+- El puerto **5000** se encuentre disponible para el Backend.
+- El puerto utilizado por **Vite** se encuentre accesible para el Frontend.
+
+---
+
+## 8. Consideraciones
+
+- No subir el archivo `.env` al repositorio.
+- Verificar la conectividad con MongoDB antes de iniciar el sistema.
+- Para un entorno de producción se recomienda restringir el acceso a MongoDB Atlas únicamente a las direcciones IP autorizadas.
 
 ---
 
@@ -263,6 +341,32 @@ Durante el desarrollo del proyecto se implementaron conceptos de:
 - Hooks (`useState`, `useEffect`).
 - Manejo de imágenes con Multer.
 - Diseño de interfaces responsivas.
+
+---
+
+# 📸 Capturas del Sistema
+
+## 📊 Dashboard
+
+![Dashboard](docs/dashboard.png)
+
+---
+
+## 👥 Gestión de Clientes
+
+![Clientes](docs/clientes.png)
+
+---
+
+## 📋 Detalle del Cliente
+
+![Detalle Cliente](docs/detalle-cliente.png)
+
+---
+
+## 💇 Portafolio de Servicios
+
+![Portafolio](docs/portafolio.png)
 
 ---
 
