@@ -370,6 +370,13 @@ Durante el desarrollo del proyecto se implementaron conceptos de:
 
 ---
 
+# 📝 Nota
+
+Las capturas de pantalla y los registros mostrados en este repositorio corresponden a **datos ficticios** creados exclusivamente con fines demostrativos y académicos.
+
+No se utiliza información personal ni datos reales de clientes.
+
+---
 # 👨‍💻 Autor
 
 **David Alejandro Cruz Palacios**
